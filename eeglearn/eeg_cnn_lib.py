@@ -12,7 +12,7 @@ import theano.tensor as T
 
 from scipy.interpolate import griddata
 from sklearn.preprocessing import scale
-from utils import augment_EEG, cart2sph, pol2cart
+from eeglearn.utils import augment_EEG, cart2sph, pol2cart
 
 import lasagne
 from lasagne.regularization import regularize_layer_params, regularize_network_params, l1, l2
@@ -454,7 +454,7 @@ def train(images, labels, fold, model_type, batch_size=32, num_epochs=5):
 
 
 if __name__ == '__main__':
-    from utils import reformatInput
+    from eeglearn.utils import reformatInput
 
     # Load electrode locations
     print('Loading data...')
